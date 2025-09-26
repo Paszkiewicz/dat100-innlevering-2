@@ -2,73 +2,76 @@ package no.hvl.dat100.tabeller;
 
 public class Tabeller {
 
-    // a)
-    public static void skrivUt(int[] tabell) {
+	// a)
+	public static void skrivUt(int[] tabell) {
 
-        // TODO
-        throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
-
+        for (int i = 0; i < tabell.length; i++) {
+            System.out.print(tabell[i] + " ");
+        }
     }
 
-    // b)
-    public static String tilStreng(int[] tabell) {
-
-        // TODO
-        throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
-    }
-
-    // c)
-    public static int summer(int[] tabell) {
-
-        // TODO
+	// b)
+	public static String tilStreng(int[] tabell) {
         throw new UnsupportedOperationException("Metoden summer ikke implementert");
     }
 
-    // d)
-    public static boolean finnesTall(int[] tabell, int tall) {
+	// c)
+	public static int summer(int[] tabell) {
+		int total = 0;
+        for (int i = 0; i < tabell.length; i++) {
+            total = total + tabell[i];
+        }
+        System.out.print(total);
+        return total;
+	}
 
-        // TODO
-        throw new UnsupportedOperationException("Metoden finnesTall ikke implementert");
+	// d)
+	public static boolean finnesTall(int[] tabell, int tall) {
+        boolean finnes = false;
 
-    }
-
-    // e)
-    public static int posisjonTall(int[] tabell, int tall) {
-
-        // TODO
-        throw new UnsupportedOperationException("Metoden posisjonTall ikke implementert");
-    }
-
-    // f)
-    public static int[] reverser(int[] tabell) {
-
-        // TODO
-        throw new UnsupportedOperationException("Metoden reverser ikke implementert");
-    }
-
-    // g)
-    public static boolean erSortert(int[] tabell) {
-        for (int i = 1; i < tabell.length; i++) {
-            if (tabell[i] < tabell[i - 1]) {
-                return false;
+		for (int i = 0; i < tabell.length; i++) {
+            if (tabell[i] == tall) {
+                finnes = true;
             }
         }
-        return true;
+        return finnes;
+	}
+
+	// e)
+	public static int posisjonTall(int[] tabell, int tall) {
+        for (int i = 0; i < tabell.length; i++ ) {
+            if (tabell[i] == tall) {
+                return i;
+            }
+        }
+        return -1;
     }
 
+	// f)
+	public static int[] reverser(int[] tabell) {
+     //   int[] newTable = new int[tabell.length];
 
-    // h)
-    public static int[] settSammen(int[] tabell1, int[] tabell2) {
-        int[] tabell3 = new int[tabell1.length + tabell2.length];
+       // for (int i = tabell.length-1; i > -1; i--) {
+            
+       // }
+       // return newTable;
 
-        for (int i = 0; i < tabell1.length; i++) {
-            tabell3[i] = tabell1[i];
-        }
-
-        for (int i = 0; i < tabell2.length; i++) {
-            tabell3[tabell1.length + i] = tabell2[i];
-        }
-        return tabell3;
+        throw new UnsupportedOperationException("Metoden erSortert ikke implementert");
 
     }
+
+	// g)
+	public static boolean erSortert(int[] tabell) {
+
+		// TODO
+		throw new UnsupportedOperationException("Metoden erSortert ikke implementert");
+	}
+
+	// h)
+	public static int[] settSammen(int[] tabell1, int[] tabell2) {
+
+		// TODO
+		throw new UnsupportedOperationException("Metoden settSammen ikke implementert");
+
+	}
 }
