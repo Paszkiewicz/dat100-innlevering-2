@@ -4,9 +4,15 @@ public class Matriser {
 
 	// a)
 	public static void skrivUt(int[][] matrise) {
-		
-		// TODO
-		throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
+
+        for (int rad = 0; rad < matrise.length; rad++); {
+            int rad = 0;
+            for (int kolonne = 0; kolonne< matrise[rad].length; kolonne++) {
+
+                System.out.println("matrise["+rad+"]["+kolonne+"] = " + matrise[rad][kolonne]);
+            }
+        }
+
 	}
 
 	// b)
@@ -28,7 +34,9 @@ public class Matriser {
 	// d)
 	public static boolean erLik(int[][] a, int[][] b) {
 
-		// TODO
+        if (a == null && b == null) return true;
+        if (a == null )
+
 		throw new UnsupportedOperationException("Metoden erLik ikke implementert");
 		
 	}
