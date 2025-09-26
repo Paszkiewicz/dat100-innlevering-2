@@ -35,11 +35,22 @@ public class Matriser {
 	public static boolean erLik(int[][] a, int[][] b) {
 
         if (a == null && b == null) return true;
-        if (a == null )
+        if (a == null || b == null) return false;
 
-		throw new UnsupportedOperationException("Metoden erLik ikke implementert");
+        if (a.length != b.length) return false;
+
+        for (int i = 0; i < a.length; i++) {
+            if (a[i].length != b[1].length) return false;
+            for (int j = 0; j < a[i].length; j++) {
+                if (a[i][j] != b[i][j]) return false;
+            }
+        }
+        return true;
+    }
+
+
 		
-	}
+
 	
 	// e)
 	public static int[][] speile(int[][] matrise) {
