@@ -5,46 +5,60 @@ public class Tabeller {
 	// a)
 	public static void skrivUt(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
-
-	}
+        for (int i = 0; i < tabell.length; i++) {
+            System.out.print(tabell[i] + " ");
+        }
+    }
 
 	// b)
 	public static String tilStreng(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
-	}
+        throw new UnsupportedOperationException("Metoden summer ikke implementert");
+    }
 
 	// c)
 	public static int summer(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden summer ikke implementert");
+		int total = 0;
+        for (int i = 0; i < tabell.length; i++) {
+            total = total + tabell[i];
+        }
+        System.out.print(total);
+        return total;
 	}
 
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
+        boolean finnes = false;
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden finnesTall ikke implementert");
-
+		for (int i = 0; i < tabell.length; i++) {
+            if (tabell[i] == tall) {
+                finnes = true;
+            }
+        }
+        return finnes;
 	}
 
 	// e)
 	public static int posisjonTall(int[] tabell, int tall) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden posisjonTall ikke implementert");
-	}
+        for (int i = 0; i < tabell.length; i++ ) {
+            if (tabell[i] == tall) {
+                return i;
+            }
+        }
+        return -1;
+    }
 
 	// f)
 	public static int[] reverser(int[] tabell) {
+     //   int[] newTable = new int[tabell.length];
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden reverser ikke implementert");
-	}
+       // for (int i = tabell.length-1; i > -1; i--) {
+            
+       // }
+       // return newTable;
+
+        throw new UnsupportedOperationException("Metoden erSortert ikke implementert");
+
+    }
 
 	// g)
 	public static boolean erSortert(int[] tabell) {
