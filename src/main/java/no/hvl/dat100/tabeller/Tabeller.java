@@ -1,18 +1,28 @@
 package no.hvl.dat100.tabeller;
 
 public class Tabeller {
-
-    // a)
-    public static void skrivUt(int[] tabell) {
+  // a)
+  public static void skrivUt(int[] tabell) {
 
         for (int i = 0; i < tabell.length; i++) {
             System.out.print(tabell[i] + ", ");
         }
     }
 
-    // b)
-    public static String tilStreng(int[] tabell) {
-        throw new UnsupportedOperationException("Metoden summer ikke implementert");
+
+	// b)
+  public static String tilStreng(int[] tabell) {
+
+        String resultat = "[";
+
+        for (int i = 0; i < tabell.length; i++) {
+            resultat = resultat + tabell[i];
+            if (i < tabell.length - 1) {
+                resultat = resultat + ",";
+            }
+        }
+        resultat = resultat + "]";
+        return resultat;
     }
 
     // c)
@@ -23,6 +33,7 @@ public class Tabeller {
         }
         System.out.print(total);
         return total;
+
     }
 
     // d)
@@ -37,18 +48,18 @@ public class Tabeller {
         return finnes;
     }
 
-    // e)
-    public static int posisjonTall(int[] tabell, int tall) {
-        for (int i = 0; i < tabell.length; i++ ) {
-            if (tabell[i] == tall) {
-                return i;
-            }
-        }
-        return -1;
-    }
-
-    // f)
-    public static int[] reverser(int[] tabell) {
+  // e)
+  public static int posisjonTall(int[] tabell, int tall) {
+      for (int i = 0; i < tabell.length; i++ ) {
+          if (tabell[i] == tall) {
+              return i;
+          }
+      }
+      return -1;
+  }
+    
+  // f)
+  public static int[] reverser(int[] tabell) {
         int[] newTable = new int[tabell.length];
         int plassering = 0;
 
@@ -59,18 +70,28 @@ public class Tabeller {
         return newTable;
     }
 
-    // g)
-    public static boolean erSortert(int[] tabell) {
+  // g)
+	public static boolean erSortert(int[] tabell) {
+        for (int i = 1; i < tabell.length; i++) {
+            if (tabell[i] < tabell[i - 1]) {
+                return false;
+            }
+        }
+        return true;
+	}
 
-        // TODO
-        throw new UnsupportedOperationException("Metoden erSortert ikke implementert");
-    }
+	// h)
+	public static int[] settSammen(int[] tabell1, int[] tabell2) {
+        int[] tabell3 = new int[tabell1.length + tabell2.length];
 
-    // h)
-    public static int[] settSammen(int[] tabell1, int[] tabell2) {
+        for (int i = 0; i < tabell1.length; i++) {
+            tabell3[i] = tabell1[i];
+        }
 
-        // TODO
-        throw new UnsupportedOperationException("Metoden settSammen ikke implementert");
+        for (int i = 0; i < tabell2.length; i++) {
+            tabell3[tabell1.length + i] = tabell2[i];
+        }
+        return tabell3;
 
-    }
+	}
 }
