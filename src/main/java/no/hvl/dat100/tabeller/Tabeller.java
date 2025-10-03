@@ -1,8 +1,9 @@
 package no.hvl.dat100.tabeller;
 
 public class Tabeller {
-  // a)
-  public static void skrivUt(int[] tabell) {
+
+    // a)
+    public static void skrivUt(int[] tabell) {
 
         for (int i = 0; i < tabell.length; i++) {
             System.out.print(tabell[i] + ", ");
